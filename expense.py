@@ -9,7 +9,7 @@ from matplotlib import ticker
 pd.options.mode.chained_assignment = None  # default='warn'
 pd.set_option('display.width', 320)
 pd.set_option('display.max_columns', 30)
-pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_rows', 300)
 
 file_name = 'expense.xlsx'
 menu_ls = ['Insert Record', 'Delete Record', 'Create Sheet', 'Delete Sheet', 'View Sheet', 'View Chart', 'Exit']
