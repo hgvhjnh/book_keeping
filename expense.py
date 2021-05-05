@@ -172,6 +172,7 @@ def view_sheet(sheet_name):
         how='outer',
         on='Date'
     )
+    balance_summary.fillna(0, inplace=True)
     balance_summary['Balance'] = balance_summary['Income'] - balance_summary['Expense']
     if sheet_name == 'All Sheets':
         balance_summary = balance_summary.append(balance_summary.sum(numeric_only=True), ignore_index=True)
