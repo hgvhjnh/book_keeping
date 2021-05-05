@@ -464,6 +464,7 @@ def balance_bar_chart(sheet_name):
         how='outer',
         on='Month'
     )
+    balance_mon.fillna(0, inplace=True)
     balance_mon['Balance'] = balance_mon['Income'] - balance_mon['Expense']
     balance_mon.loc[(balance_mon['Month'].str[-2:] != '01') & (balance_mon.index != 0), 'Month'] = balance_mon['Month'].str[-2:]
     ax = balance_mon.plot(x='Month', y=['Income', 'Expense', 'Balance'], kind='bar', figsize=(14, 8))
